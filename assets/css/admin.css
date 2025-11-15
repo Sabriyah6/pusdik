@@ -1,0 +1,163 @@
+/* ================================================= */
+/* === 01. ADMIN LAYOUT (SIDEBAR & MAIN CONTENT) === */
+/* ================================================= */
+.admin-body {
+    display: flex; /* Mengaktifkan Flexbox untuk layout sidebar-content */
+}
+
+/* Sidebar Styling */
+.sidebar {
+    width: 250px;
+    background-color: #2c3e50; /* Warna gelap khas Admin */
+    color: white;
+    padding: 20px 0;
+    min-height: 100vh;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    position: fixed; /* Membuat sidebar tetap */
+}
+.sidebar-brand {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #ecf0f1;
+    text-transform: uppercase;
+}
+.sidebar-link {
+    display: block;
+    padding: 12px 20px;
+    color: #bdc3c7;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+.sidebar-link:hover {
+    background-color: #34495e; /* Hover gelap */
+    color: white;
+    text-decoration: none;
+}
+.sidebar-divider {
+    border-color: #34495e;
+    margin: 15px 20px;
+}
+
+/* Main Content Styling */
+.content {
+    margin-left: 250px; /* Offset margin agar konten tidak tertutup sidebar */
+    padding: 20px 40px;
+    flex-grow: 1; /* Mengisi sisa ruang */
+    width: calc(100% - 250px);
+}
+.page-header {
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+.footer-text {
+    text-align: center; 
+    margin-top: 50px; 
+    padding: 10px; 
+    border-top: 1px solid #ccc;
+    font-size: 0.9em;
+    color: #777;
+}
+
+/* ================================================= */
+/* === 02. DASHBOARD & STATS STYLES ================ */
+/* ================================================= */
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+.col-4 {
+    flex: 0 0 calc(33.333% - 14px); /* Tiga kolom dengan gap 20px */
+}
+
+.stat-card {
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    color: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+.stat-card h2 {
+    font-size: 2.5em;
+    margin: 5px 0 10px;
+    color: white;
+}
+.stat-card p {
+    margin: 0;
+    opacity: 0.9;
+}
+
+/* Warna Kartu */
+.bg-primary { background-color: #007bff; }
+.bg-info { background-color: #17a2b8; }
+.bg-warning { background-color: #ffc107; color: #333; } /* Warning card need darker text */
+.link-warning {
+    color: #856404;
+    font-weight: bold;
+}
+
+/* ================================================= */
+/* === 03. TABLES & CARD STYLES (USERS/BOOKS LIST) == */
+/* ================================================= */
+.card {
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+}
+.card-header {
+    padding: 15px;
+    border-bottom: 1px solid #eee;
+    background-color: #f7f7f7;
+    border-radius: 8px 8px 0 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.card-body {
+    padding: 20px;
+}
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+}
+.table th, .table td {
+    padding: 12px 15px;
+    border: 1px solid #eee;
+    text-align: left;
+    font-size: 0.9em;
+}
+.table th {
+    background-color: #f2f2f2;
+    font-weight: bold;
+    color: #333;
+}
+.table-striped tbody tr:nth-child(odd) {
+    background-color: #f9f9f9;
+}
+
+/* Badges for Status */
+.badge {
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 0.75em;
+    font-weight: bold;
+    color: white;
+}
+.badge-success { background-color: #28a745; }
+.badge-warning { background-color: #ffc107; color: #333; }
+.badge-danger { background-color: #dc3545; }
+.badge-info { background-color: #17a2b8; }
+
+/* Form di dalam Card */
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+.form-control-file {
+    padding: 10px 0;
+    display: block;
+}

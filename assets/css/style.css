@@ -1,0 +1,249 @@
+/* ================================================= */
+/* === 01. GENERAL / BASE STYLES ==================== */
+/* ================================================= */
+body { 
+    font-family: Arial, sans-serif; 
+    margin: 0; 
+    padding: 0; 
+    background-color: #f4f4f9; 
+    color: #333;
+    line-height: 1.6;
+}
+.container { 
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px 0;
+}
+h1, h2, h3, h4 {
+    color: #2c3e50;
+    margin-top: 0;
+}
+hr {
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 20px 0;
+}
+a {
+    color: #007bff;
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: underline;
+}
+
+/* ================================================= */
+/* === 02. FORMS & INPUTS (COMMON STYLES) ========== */
+/* ================================================= */
+.form-group {
+    margin-bottom: 15px;
+}
+.form-control {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box; /* Pastikan padding tidak menambah lebar */
+}
+button, .btn {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1em;
+    display: inline-block;
+    text-align: center;
+    text-decoration: none;
+}
+.btn-primary {
+    background-color: #007bff;
+    color: white;
+}
+.btn-success {
+    background-color: #28a745;
+    color: white;
+}
+.btn-danger {
+    background-color: #dc3545;
+    color: white;
+}
+.btn-block {
+    width: 100%;
+    display: block;
+}
+
+/* ================================================= */
+/* === 03. ALERTS (Flashdata Messages) ============== */
+/* ================================================= */
+.alert {
+    padding: 15px;
+    margin-bottom: 20px;
+    border: 1px solid transparent;
+    border-radius: 4px;
+}
+.alert-success {
+    color: #155724;
+    background-color: #d4edda;
+    border-color: #c3e6cb;
+}
+.alert-danger {
+    color: #721c24;
+    background-color: #f8d7da;
+    border-color: #f5c6cb;
+}
+.alert-warning {
+    color: #856404;
+    background-color: #fff3cd;
+    border-color: #ffeeba;
+}
+
+/* ================================================= */
+/* === 04. HOME PAGE (Public/Home.php) ============== */
+/* ================================================= */
+.navbar { 
+    background-color: #007bff; 
+    padding: 15px; 
+    color: white; 
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+}
+.navbar a { 
+    color: white; 
+    text-decoration: none; 
+    margin-left: 20px; 
+}
+.book-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+.book-card { 
+    border: 1px solid #e0e0e0; 
+    padding: 15px; 
+    border-radius: 8px; 
+    background-color: white; 
+    width: calc(33.333% - 20px); /* 3 kolom */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    text-align: center;
+}
+.book-cover {
+    max-height: 150px;
+    width: auto;
+    object-fit: cover;
+    margin-bottom: 10px;
+}
+.btn-read-public {
+    background-color: #dc3545;
+    color: white; 
+    padding: 8px 15px; 
+    display: inline-block; 
+    margin-top: 10px;
+}
+
+
+/* ================================================= */
+/* === 05. AUTH (Login/Register) STYLES ============ */
+/* ================================================= */
+.auth-body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #e9ecef; /* Warna latar belakang khusus */
+}
+.auth-box { 
+    background: white; 
+    padding: 30px; 
+    border-radius: 8px; 
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15); 
+    width: 100%;
+    max-width: 400px; 
+}
+.auth-box h2 {
+    text-align: center;
+    margin-bottom: 25px;
+    color: #007bff;
+}
+.auth-link {
+    margin-top: 15px;
+    text-align: center;
+}
+
+
+/* ================================================= */
+/* === 06. LIBRARY (USER SIDE) STYLES ============== */
+/* ================================================= */
+.lib-navbar { 
+    background-color: #17a2b8; 
+    padding: 15px; 
+    color: white; 
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+}
+.lib-navbar a { 
+    color: white; 
+    margin-left: 15px; 
+}
+.search-form {
+    display: flex;
+    margin: 20px 0;
+}
+.search-input {
+    flex-grow: 1;
+    border-radius: 4px 0 0 4px;
+    border-right: none;
+}
+.btn-search {
+    background-color: #28a745;
+    color: white;
+    border-radius: 0 4px 4px 0;
+}
+/* Style untuk daftar buku library */
+.book-grid { 
+    display: grid; 
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); 
+    gap: 20px; 
+    margin-top: 20px; 
+}
+.book-item {
+    border: 1px solid #ddd;
+    padding: 15px;
+    border-radius: 5px;
+    text-align: center;
+    background-color: white;
+}
+.book-cover-image {
+    max-width: 100%;
+    height: auto;
+    max-height: 200px;
+    object-fit: cover;
+    margin-bottom: 10px;
+}
+.btn-read {
+    background-color: #007bff;
+    color: white;
+    margin-top: 10px;
+}
+
+/* Style untuk halaman Baca Buku */
+.detail-content {
+    display: flex;
+    gap: 30px;
+    margin-top: 20px;
+}
+.book-cover-large {
+    max-width: 250px;
+    height: auto;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+.metadata-section {
+    flex-grow: 1;
+}
+.btn-read-file {
+    background-color: #28a745;
+    padding: 12px 25px;
+    font-weight: bold;
+    margin-top: 15px;
+}
